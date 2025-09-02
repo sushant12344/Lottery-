@@ -21,6 +21,7 @@
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
   <title>Lottery checker</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
   <link rel="stylesheet" href="common.css?v=20250831">
   <link rel="stylesheet" href="styles.css?v=20250831">
   <link rel="stylesheet" href="browser-compatibility.css?v=20250831">
@@ -45,7 +46,7 @@
         <div class="date-selection">
           <label for="date-picker">📅 Select Date:</label>
           <div class="date-input-wrapper">
-            <input type="date" id="date-picker" />
+            <input type="date" id="date-picker" placeholder="dd/mm/yyyy">/>
           </div>
         </div>
         
@@ -215,18 +216,18 @@
       // Load modern version
       document.write('<script src="script.js?v=20250831_autofix"><\/script>');
     }
-  const input = document.getElementById("myDate");
-
-  input.addEventListener("change", () => {
-    let val = new Date(input.value);
-    let formatted = val.toLocaleDateString("en-GB"); // forces dd/mm/yyyy
-    console.log(formatted);
-  });
+ 
   </script>
   
   <!-- Fallback for very old browsers -->
   <noscript>
     <p>This website requires JavaScript to function properly. Please enable JavaScript in your browser.</p>
   </noscript>
+ <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+ <script>
+  flatpickr("#myDate", {
+    dateFormat: "d/m/Y"  // forces dd/mm/yyyy
+  });
+</script>
 </body>
 </html>
