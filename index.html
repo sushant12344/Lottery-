@@ -215,6 +215,13 @@
       // Load modern version
       document.write('<script src="script.js?v=20250831_autofix"><\/script>');
     }
+  const input = document.getElementById("myDate");
+
+  input.addEventListener("change", () => {
+    let val = new Date(input.value);
+    let formatted = val.toLocaleDateString("en-GB"); // forces dd/mm/yyyy
+    console.log(formatted);
+  });
   </script>
   
   <!-- Fallback for very old browsers -->
