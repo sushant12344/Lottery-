@@ -21,7 +21,7 @@
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
   <title>Lottery checker</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flat pickr@4.6.13/dist/flatpickr.min.css">
   <link rel="stylesheet" href="common.css?v=20250831">
   <link rel="stylesheet" href="styles.css?v=20250831">
   <link rel="stylesheet" href="browser-compatibility.css?v=20250831">
@@ -46,7 +46,7 @@
         <div class="date-selection">
           <label for="date-picker">📅 Select Date:</label>
           <div class="date-input-wrapper">
-            <input type="date" id="date-picker" placeholder="dd/mm/yyyy">
+            <input type="text" id="date-picker" placeholder="dd/mm/yyyy" autocomplete="off"/>
           </div>
         </div>
         
@@ -223,11 +223,25 @@
   <noscript>
     <p>This website requires JavaScript to function properly. Please enable JavaScript in your browser.</p>
   </noscript>
- <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
- <script>
-  flatpickr("#myDate", {
-    dateFormat: "d/m/Y"  // forces dd/mm/yyyy
-  });
-</script>
+ <script src="https://cdn.jsdelivr.net/npm/flatp ickr@4.6.13/dist/flatpickr.min.js"></scrip>
+<script>
+
+document.addEventListener('DOMContentLo
+
+aded', function () { if (window.flatpickr) {
+
+document.getElementById('status').textC ontent = 'Flatpickr failed to load.';
+
+return;
+
+,
+
+flatpickr('#myDate', {
+
+dateFormat: 'd/m/Y', // force
+dd/mm/yyyy
+allowInput: true,
+disableMobile: true // <--
+IMPORTANT: force Flatpickr on phones,,</script>
 </body>
 </html>
