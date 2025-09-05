@@ -46,7 +46,7 @@
         <div class="date-selection">
           <label for="date-picker">📅 Select Date:</label>
           <div class="date-input-wrapper">
-            <input type="date" id="date-picker" placeholder="dd/mm/yyyy" autocomplete="off"/>
+            <input type="date" id="date-picker"/>
           </div>
         </div>
         
@@ -223,31 +223,5 @@
   <noscript>
     <p>This website requires JavaScript to function properly. Please enable JavaScript in your browser.</p>
   </noscript>
- <script src="https://cdn.jsdelivr.net/npm/flatp ickr@4.6.13/dist/flatpickr.min.js"></scrip>
-<script>
-
-document.addEventListener('DOMContentLo
-
-aded', function () { if (window.flatpickr) {
-
-document.getElementById('status').textC ontent = 'Flatpickr failed to load.';
-
-return;
-
-,
-
-flatpickr('#myDate', {
-
-dateFormat: 'd/m/Y', // force
-dd/mm/yyyy
-allowInput: true,
-disableMobile: true // <--
-IMPORTANT: force Flatpickr on phones,,</script>
- <script>
-  const input = document.getElementById('myDate');
-  input.addEventListener('change', () => {
-    console.log("Raw input value →", input.value);
-  });
-</script>
 </body>
 </html>
